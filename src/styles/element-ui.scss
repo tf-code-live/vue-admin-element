@@ -1,0 +1,228 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    min-width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px !important;
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+
+  .el-dialog__header {
+    position: fixed;
+    width: inherit;
+    padding: 10px 20px 10px 30px;
+    background: #edf2f7;
+    z-index: 999;
+
+    .el-dialog__title::before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 16px;
+      background-color: #1fb860;
+      top: 14px;
+      left: 20px;
+      border-radius: 20px;
+    }
+
+    .el-dialog__headerbtn {
+      top: 10px;
+    }
+  }
+
+  .el-dialog__body {
+    padding-top: 70px;
+  }
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+.el-table {
+  user-select: text;
+
+  th.el-table__cell {
+    // background: #dedede;
+    background: #E7EAED;
+    color: #111111;
+  }
+
+  .el-table__row,
+  .el-table__row--striped {
+    &:hover {
+      box-shadow: 1px 1px 4px 0 #999999;
+      position: relative;
+      // z-index: 99;
+      .allow-click {
+        color: #1fb860;
+      }
+    }
+  }
+
+  // 修改滚动条样式
+  ::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+  /*正常情况下滑块的样式*/
+  ::-webkit-scrollbar-thumb {
+    background: #E7EAED;
+    border-radius: 10px;
+    transition: all 0.6s;
+
+    &:hover {
+      background-color: #304156;
+    }
+  }
+}
+
+.el-button {
+  padding: 8px 14px;
+}
+
+.el-dropdown-menu--medium {
+  padding: 0;
+
+  .el-dropdown-menu__item {
+    line-height: 35px;
+    padding: 5px 30px;
+  }
+}
+
+.el-dropdown-menu__item--divided:before {
+  content: "";
+  height: 0 !important;
+}
+
+.el-dropdown-menu__item--divided {
+  margin-top: 0 !important;
+}
+
+
+.el-collapse-item__header {
+  border-bottom: none;
+  height: auto;
+  line-height: normal;
+
+  .collapse-title {
+    padding: 10px 15px;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .el-icon-user {
+        font-size: 24px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.el-select {
+  width: 100%;
+}
+
+.el-drawer__body {
+  padding: 20px;
+}
+
+.el-button+.el-button {
+  margin-left: 20px;
+}
+
+.el-table__expanded-cell {
+  padding: 20px 50px !important;
+}
+
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus {
+  // border-width: 2px;
+  box-shadow: 0 0 4px 0 #ff4949;
+}
+
+.el-textarea.is-active .el-textarea__inner,
+.el-textarea__inner:focus,
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  // border-width: 2px;
+  box-shadow: 0 0 4px 0 #1fb860;
+}
